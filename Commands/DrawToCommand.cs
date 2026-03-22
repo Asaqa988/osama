@@ -17,16 +17,17 @@ namespace DrawingApp.Commands
         }
 
         /// <summary>
-        /// Executes the draw command by drawing a line and updating the current drawing state.
+        /// Executes the draw command by drawing a line on BOOSE canvas and updating the current drawing state.
         /// </summary>
-        /// <param name="g">The graphics object used for drawing.</param>
+        /// <param name="canvas">The BOOSE canvas object used for drawing.</param>
         /// <param name="state">The current drawing state of the application.</param>
-        public override void Execute(Graphics g, DrawingState state)
+        public override void Execute(BOOSE.ICanvas canvas, DrawingState state)
         {
-            if (g == null) throw new ArgumentNullException(nameof(g));
+            if (canvas == null) throw new ArgumentNullException(nameof(canvas));
             if (state == null) throw new ArgumentNullException(nameof(state));
 
-            g.DrawLine(Pens.Black, state.CurrentX, state.CurrentY, X, Y);
+            canvas.MoveTo(state.CurrentX, state.CurrentY); 
+            canvas.DrawTo(X, Y);
 
             state.CurrentX = X;
             state.CurrentY = Y;

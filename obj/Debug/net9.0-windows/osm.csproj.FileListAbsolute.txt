@@ -12,3 +12,7 @@ C:\Users\asaqa\Desktop\osm\obj\Debug\net9.0-windows\refint\osm.dll
 C:\Users\asaqa\Desktop\osm\obj\Debug\net9.0-windows\osm.pdb
 C:\Users\asaqa\Desktop\osm\obj\Debug\net9.0-windows\osm.genruntimeconfig.cache
 C:\Users\asaqa\Desktop\osm\obj\Debug\net9.0-windows\ref\osm.dll
+C:\Users\asaqa\Desktop\osm\bin\Debug\net9.0-windows\BOOSE.dll
+C:\Users\asaqa\Desktop\osm\obj\Debug\net9.0-windows\osm.csproj.AssemblyReference.cache
+C:\Users\asaqa\Desktop\osm\obj\Debug\net9.0-windows\osm.sourcelink.json
+C:\Users\asaqa\Desktop\osm\obj\Debug\net9.0-windows\osm.csproj.Up2Date

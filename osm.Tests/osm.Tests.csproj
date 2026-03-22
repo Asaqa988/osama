@@ -23,4 +23,9 @@
     <ProjectReference Include="..\osm.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="BOOSE">
+      <HintPath>..\BOOSE.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>

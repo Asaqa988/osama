@@ -103,3 +103,5 @@ C:\Users\asaqa\Desktop\osm\osm.Tests\obj\Debug\net9.0-windows\refint\osm.Tests.d
 C:\Users\asaqa\Desktop\osm\osm.Tests\obj\Debug\net9.0-windows\osm.Tests.pdb
 C:\Users\asaqa\Desktop\osm\osm.Tests\obj\Debug\net9.0-windows\osm.Tests.genruntimeconfig.cache
 C:\Users\asaqa\Desktop\osm\osm.Tests\obj\Debug\net9.0-windows\ref\osm.Tests.dll
+C:\Users\asaqa\Desktop\osm\osm.Tests\obj\Debug\net9.0-windows\osm.Tests.sourcelink.json
+C:\Users\asaqa\Desktop\osm\osm.Tests\bin\Debug\net9.0-windows\BOOSE.dll

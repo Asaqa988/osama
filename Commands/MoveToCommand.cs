@@ -17,12 +17,16 @@ namespace DrawingApp.Commands
         }
 
         /// <summary>
-        /// Executes the move command by updating the current drawing state.
+        /// Executes the move command by updating the current drawing state and BOOSE canvas.
         /// </summary>
-        /// <param name="g">The graphics object (unused for reading).</param>
+        /// <param name="canvas">The BOOSE canvas object.</param>
         /// <param name="state">The current drawing state of the application.</param>
-        public override void Execute(Graphics g, DrawingState state)
+        public override void Execute(BOOSE.ICanvas canvas, DrawingState state)
         {
+            if (canvas == null) throw new ArgumentNullException(nameof(canvas));
+            if (state == null) throw new ArgumentNullException(nameof(state));
+
+            canvas.MoveTo(X, Y);
             state.CurrentX = X;
             state.CurrentY = Y;
         }

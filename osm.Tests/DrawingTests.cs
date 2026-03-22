@@ -14,8 +14,9 @@ namespace osm.Tests
             var state = new DrawingState();
             var command = new MoveToCommand(50, 75);
 
-            // Execute without Graphics object (not used in MoveTo)
-            command.Execute(null, state); 
+            var canvas = new BOOSE.Canvas();
+            canvas.Set(500, 500);
+            command.Execute(canvas, state); 
 
             Assert.Equal(50, state.CurrentX);
             Assert.Equal(75, state.CurrentY);
@@ -27,11 +28,9 @@ namespace osm.Tests
             var state = new DrawingState();
             var command = new DrawToCommand(100, 200);
 
-            // Use dummy Graphics object for testing drawing
-            using var bmp = new Bitmap(1, 1);
-            using var g = Graphics.FromImage(bmp);
-
-            command.Execute(g, state);
+            var canvas = new BOOSE.Canvas();
+            canvas.Set(500, 500);
+            command.Execute(canvas, state);
 
             Assert.Equal(100, state.CurrentX);
             Assert.Equal(200, state.CurrentY);
@@ -47,7 +46,9 @@ namespace osm.Tests
             Assert.IsType<MoveToCommand>(command);
             
             var state = new DrawingState();
-            command.Execute(null, state);
+            var canvas = new BOOSE.Canvas();
+            canvas.Set(500, 500);
+            command.Execute(canvas, state);
             Assert.Equal(100, state.CurrentX);
             Assert.Equal(200, state.CurrentY);
         }

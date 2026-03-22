@@ -27,22 +27,17 @@ namespace DrawingApp.Commands
         }
 
         /// <summary>
-        /// Executes the draw command by drawing an ellipse with equal width and height.
+        /// Executes the draw command by drawing a circle on BOOSE canvas.
         /// Does not update the current drawing state position.
         /// </summary>
-        /// <param name="g">The graphics object used for drawing.</param>
+        /// <param name="canvas">The BOOSE canvas object used for drawing.</param>
         /// <param name="state">The current drawing state of the application.</param>
-        public override void Execute(Graphics g, DrawingState state)
+        public override void Execute(BOOSE.ICanvas canvas, DrawingState state)
         {
-            if (g == null) throw new ArgumentNullException(nameof(g));
+            if (canvas == null) throw new ArgumentNullException(nameof(canvas));
 
-            // Calculate the top-left corner bounding box for the ellipse
-            int topLeftX = X - _radius;
-            int topLeftY = Y - _radius;
-            int diameter = _radius * 2;
-
-            // Draw the circle
-            g.DrawEllipse(Pens.Black, topLeftX, topLeftY, diameter, diameter);
+            canvas.MoveTo(X, Y); // Move to center
+            canvas.Circle(_radius, false);
         }
     }
 }

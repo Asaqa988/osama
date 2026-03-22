@@ -12,10 +12,20 @@ public partial class Form1 : Form
     private DrawingState state = new DrawingState();
     private CommandFactory factory = new CommandFactory();
     private List<ICommand> commands = new List<ICommand>();
+    private BOOSE.ICanvas canvas;
 
     public Form1()
     {
         InitializeComponent();
+        try
+        {
+            canvas = new BOOSE.Canvas();
+            canvas.Set(this.Width > 0 ? this.Width : 640, this.Height > 0 ? this.Height : 480);
+        }
+        catch
+        {
+            // fallback if BOOSE.Canvas needs different initialization
+        }
     }
 
     private void btnRun_Click(object sender, EventArgs e)
@@ -48,16 +58,25 @@ public partial class Form1 : Form
 
     private void Form1_Paint(object sender, PaintEventArgs e)
     {
-        // Reset state here is strictly necessary for WinForms because Paint is called 
-        // every time the form is minimized/maximized or covered by another window
         state.CurrentX = 0;
         state.CurrentY = 0;
-
-        // Do NOT parse input. Loop through the stored command list.
-        foreach (var cmd in commands)
+        if (canvas != null)
         {
-            // Execute each command in order
-            cmd.Execute(e.Graphics, state);
+            canvas.Clear();
+            canvas.SetColour(0, 0, 0);
+
+            // Execute commands via BOOSE canvas
+            foreach (var cmd in commands)
+            {
+                cmd.Execute(canvas, state);
+            }
+
+            // Draw bitmap
+            object bmpObj = canvas.getBitmap();
+            if (bmpObj is Bitmap bmp)
+            {
+                e.Graphics.DrawImageUnscaled(bmp, 0, 0);
+            }
         }
     }
 }

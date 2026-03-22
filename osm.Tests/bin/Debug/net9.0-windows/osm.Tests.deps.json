@@ -12,7 +12,8 @@
           "coverlet.collector": "6.0.2",
           "osm": "1.0.0",
           "xunit": "2.9.2",
-          "xunit.runner.visualstudio": "2.8.2"
+          "xunit.runner.visualstudio": "2.8.2",
+          "BOOSE": "1.0.0.0"
         },
         "runtime": {
           "osm.Tests.dll": {}
@@ -348,6 +349,14 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "BOOSE/1.0.0.0": {
+        "runtime": {
+          "BOOSE.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -464,6 +473,11 @@
     },
     "osm/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BOOSE/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

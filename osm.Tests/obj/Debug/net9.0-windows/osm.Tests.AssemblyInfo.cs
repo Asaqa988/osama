@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("osm.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a221e964ed680cd836dc92fa9f36d04022ed9c0")]
 [assembly: System.Reflection.AssemblyProductAttribute("osm.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("osm.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,38 +1,86 @@
-# BOOSE Report: Object-Oriented Drawing Application Architecture
+# BOOSE Report: Drawing Application Design
 
 ## 1. Introduction
 
-The constructed system is a dynamic, text-driven graphical drawing application built using C# and Windows Forms. It solves the problem of translating human-readable textual commands (such as "moveto", "drawto", "circle", and "rectangle") into direct visual manifestations on a digital canvas. By utilizing object-oriented methodologies, the system ensures that parsing logic, state management, and graphical rendering are decoupled, creating a highly modular and maintainable codebase structure suitable for scalable software engineering.
+This project is a text-based drawing application developed using C# and Windows Forms. The system allows users to enter simple commands such as "moveto", "drawto", "circle", and "rectangle", which are then translated into graphical drawings on the screen.
+
+The main goal of this project is to demonstrate the use of object-oriented programming concepts and design patterns to build a clean and maintainable system. The application also integrates the provided BOOSE.dll as the drawing engine.
+
+---
 
 ## 2. System Design
 
-The high-level architecture operates on a unidirectional data flow governed by event-driven UI triggers. When a user submits a sequence of commands, the system delegates the raw string processing to a centralized factory component. This factory translates the text into a curated list of executable command objects. The graphical interface, acting as the invoker, clears its canvas and iterates through these commands, injecting a shared state context and the active graphics context. This separation ensures the UI remains completely unaware of how geometric shapes are algorithmically drawn or calculated.
+The system follows a simple and clear workflow. The user enters commands through the interface, and these commands are passed to a factory component that converts them into command objects.
+
+These objects are stored in a list and executed sequentially during the Paint event of the form. A shared DrawingState object is used to track the current position of the drawing cursor.
+
+This design ensures that the UI is only responsible for user interaction, while the drawing logic is handled separately.
+
+---
 
 ## 3. Design Patterns Used
 
-**Command Pattern:**
-This behavioral design pattern is the cornerstone of the application. It encapsulates a request as a standalone object containing all information about the request (e.g., coordinates, dimensions, radius). It was implemented by defining an `ICommand` interface with an `Execute` method. This pattern was chosen because it allows the application to queue instructions seamlessly in a list and execute them on-demand during the application's sequential `Paint` rendering cycle.
+### Command Pattern
 
-**Factory Pattern:**
-This creational pattern was introduced via the `CommandFactory` class to handle instantiation logic. Instead of the UI layer analyzing strings with complex conditional logic, it simply asks the factory for an `ICommand`. The factory determines which specific concrete class (`CircleCommand`, `MoveToCommand`, etc.) to return. This abstracts the instantiation logic and isolates string parsing dependencies, heavily adhering to the Single Responsibility Principle.
+The Command Pattern is used to represent each drawing instruction as an object. Each command implements the `ICommand` interface and provides its own implementation of the `Execute` method.
+
+This approach allows commands to be stored, organized, and executed in sequence, making the system flexible and easy to extend.
+
+### Factory Pattern
+
+The Factory Pattern is implemented using the `CommandFactory` class. It is responsible for parsing user input and creating the appropriate command objects.
+
+This removes parsing logic from the UI and centralizes object creation in one place, improving maintainability.
+
+---
 
 ## 4. Object-Oriented Principles
 
-- **Encapsulation:** The internal state of commands (such as `_radius`, `_width`, and `_height`) and the drawing state coordinates are protected and private. They are only exposed or mutated through controlled mechanisms, protecting the integrity of the data from external interference.
-- **Inheritance:** The `CanvasCommand` acts as an abstract base class that implements `ICommand`. It provides shared logic—like coordinate storage and integer validation mechanisms—that subclasses inherently receive, promoting code reuse.
-- **Abstraction:** The UI explicitly depends on the `ICommand` interface rather than concrete classes. The complex geometric calculations necessary to render shapes from center points (e.g., in a circle) are completely hidden behind the interface's `Execute` method.
+- **Encapsulation:** Each command stores its own data (such as coordinates and dimensions) and controls how it is used through its methods.
+
+- **Inheritance:** The `CanvasCommand` class acts as a base class for commands that require coordinates, allowing shared logic such as validation to be reused.
+
+- **Abstraction:** The system relies on interfaces such as `ICommand`, allowing the UI to interact with commands without needing to know their internal implementation.
+
+---
 
 ## 5. Key Components
 
-- **ICommand:** The fundamental interface dictating that all valid shapes and movements must provide an `Execute(Graphics g, DrawingState state)` method.
-- **CanvasCommand:** An abstract intermediary class that enforces coordinate requirements (X and Y) and validates that inputs are strictly non-negative integers.
-- **DrawingState:** A state container that holds the transient context (CurrentX, CurrentY). It provides historical memory for sequential commands like `drawto`, allowing a line to know where the previous command ended.
-- **CommandFactory:** The parser and instantiator that bridges raw dimensional string data into validated `ICommand` objects.
+- **ICommand:** Defines the `Execute` method that all commands must implement.
 
-## 6. Extensibility
+- **CanvasCommand:** An abstract class that handles shared properties such as X and Y coordinates and input validation.
 
-Due to the stringent adherence to the Open/Closed Principle, extending the system to support new shapes (like Triangles or Polygons) requires zero modifications to the UI rendering loop or existing shape classes. A developer merely needs to create a new class inheriting from `CanvasCommand` and add a single corresponding `case` branch to the `CommandFactory` parser. The newly added shape instantly integrates into the ecosystem.
+- **DrawingState:** Maintains the current drawing position, allowing commands like `drawto` to work correctly.
 
-## 7. Error Handling
+- **CommandFactory:** Parses user input and creates the correct command objects.
 
-The application relies heavily on defensive programming protocols. The `CommandFactory` proactively checks for incorrect string formatting and missing parameters before object creation, throwing highly specific exceptions such as `ArgumentException`. Furthermore, constructors like `RectangleCommand` strictly validate dimensional boundary constraints, throwing `ArgumentOutOfRangeException` for negative widths. The UI layer catches these safely in a centralized `try/catch` block, converting fatal logic errors into user-friendly graphical `MessageBox` alerts without risking an application crash.
+---
+
+## 6. BOOSE Integration
+
+The application integrates the provided BOOSE.dll as the drawing engine. Instead of using System.Drawing for drawing logic, all commands interact with the BOOSE canvas through the `BOOSE.ICanvas` interface.
+
+The WinForms layer is only responsible for displaying the final bitmap generated by BOOSE. This ensures a clear separation between rendering and drawing logic.
+
+---
+
+## 7. Extensibility
+
+The system is designed to be easily extended. New commands can be added by creating a new class that implements `ICommand` and updating the `CommandFactory`.
+
+This approach follows the Open/Closed Principle, where the system can be extended without modifying existing functionality.
+
+---
+
+## 8. Error Handling
+
+The application validates all user inputs to ensure they follow the correct format. If invalid input is detected, appropriate exceptions are thrown.
+
+These exceptions are handled in the UI layer, where user-friendly error messages are displayed instead of allowing the application to crash.
+
+---
+
+## 9. Conclusion
+
+This project demonstrates how object-oriented design and design patterns can be applied to build a structured and maintainable system. By integrating BOOSE as the drawing engine and separating responsibilities across components, the application remains flexible, readable, and easy to extend.
+This report describes the design decisions taken during the development of the drawing application.

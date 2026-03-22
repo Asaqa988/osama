@@ -19,12 +19,13 @@ namespace DrawingApp.Commands
             _height = height;
         }
 
-        public override void Execute(Graphics g, DrawingState state)
+        public override void Execute(BOOSE.ICanvas canvas, DrawingState state)
         {
-            if (g == null) throw new ArgumentNullException(nameof(g));
+            if (canvas == null) throw new ArgumentNullException(nameof(canvas));
             if (state == null) throw new ArgumentNullException(nameof(state));
 
-            g.DrawRectangle(Pens.Black, X, Y, _width, _height);
+            canvas.MoveTo(X, Y); // Move to top-left corner
+            canvas.Rect(_width, _height, false);
         }
     }
 }

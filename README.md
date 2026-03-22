@@ -2,6 +2,8 @@
 
 ## Description
 
+This project uses the provided BOOSE.dll as the drawing engine while implementing additional design patterns such as Command and Factory.
+
 This is a C# Windows Forms application that processes text-based drawing commands. Users can type commands into a text box, and the application parses and executes them to dynamically draw shapes on a graphical canvas.
 
 ## Features

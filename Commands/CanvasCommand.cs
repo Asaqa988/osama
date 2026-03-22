@@ -50,8 +50,8 @@ namespace DrawingApp.Commands
         /// <summary>
         /// Executes the drawing command. Must be implemented by specific command types.
         /// </summary>
-        /// <param name="g">The graphics object used for drawing.</param>
+        /// <param name="canvas">The canvas object used for drawing.</param>
         /// <param name="state">The current drawing state of the application.</param>
-        public abstract void Execute(Graphics g, DrawingState state);
+        public abstract void Execute(BOOSE.ICanvas canvas, DrawingState state);
     }
 }
