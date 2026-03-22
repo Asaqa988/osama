@@ -1,0 +1,23 @@
+﻿C:\Users\asaqa\Desktop\osm\obj\Debug\net9.0-windows\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs(4,12): error CS0579: Duplicate 'global::System.Runtime.Versioning.TargetFrameworkAttribute' attribute [C:\Users\asaqa\Desktop\osm\osm.csproj]
+C:\Users\asaqa\Desktop\osm\obj\Debug\net9.0-windows\osm.AssemblyInfo.cs(13,12): error CS0579: Duplicate 'System.Reflection.AssemblyCompanyAttribute' attribute [C:\Users\asaqa\Desktop\osm\osm.csproj]
+C:\Users\asaqa\Desktop\osm\obj\Debug\net9.0-windows\osm.AssemblyInfo.cs(14,12): error CS0579: Duplicate 'System.Reflection.AssemblyConfigurationAttribute' attribute [C:\Users\asaqa\Desktop\osm\osm.csproj]
+C:\Users\asaqa\Desktop\osm\obj\Debug\net9.0-windows\osm.AssemblyInfo.cs(15,12): error CS0579: Duplicate 'System.Reflection.AssemblyFileVersionAttribute' attribute [C:\Users\asaqa\Desktop\osm\osm.csproj]
+C:\Users\asaqa\Desktop\osm\obj\Debug\net9.0-windows\osm.AssemblyInfo.cs(16,12): error CS0579: Duplicate 'System.Reflection.AssemblyInformationalVersionAttribute' attribute [C:\Users\asaqa\Desktop\osm\osm.csproj]
+C:\Users\asaqa\Desktop\osm\obj\Debug\net9.0-windows\osm.AssemblyInfo.cs(17,12): error CS0579: Duplicate 'System.Reflection.AssemblyProductAttribute' attribute [C:\Users\asaqa\Desktop\osm\osm.csproj]
+C:\Users\asaqa\Desktop\osm\obj\Debug\net9.0-windows\osm.AssemblyInfo.cs(18,12): error CS0579: Duplicate 'System.Reflection.AssemblyTitleAttribute' attribute [C:\Users\asaqa\Desktop\osm\osm.csproj]
+C:\Users\asaqa\Desktop\osm\obj\Debug\net9.0-windows\osm.AssemblyInfo.cs(19,12): error CS0579: Duplicate 'System.Reflection.AssemblyVersionAttribute' attribute [C:\Users\asaqa\Desktop\osm\osm.csproj]
+C:\Users\asaqa\Desktop\osm\obj\Debug\net9.0-windows\osm.AssemblyInfo.cs(20,12): error CS0579: Duplicate 'System.Runtime.Versioning.TargetPlatformAttribute' attribute [C:\Users\asaqa\Desktop\osm\osm.csproj]
+C:\Users\asaqa\Desktop\osm\osm.Tests\DrawingTests.cs(3,7): error CS0246: The type or namespace name 'Xunit' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\asaqa\Desktop\osm\osm.csproj]
+C:\Users\asaqa\Desktop\osm\osm.Tests\obj\Debug\net9.0-windows\osm.Tests.GlobalUsings.g.cs(11,22): error CS0400: The type or namespace name 'Xunit' could not be found in the global namespace (are you missing an assembly reference?) [C:\Users\asaqa\Desktop\osm\osm.csproj]
+C:\Users\asaqa\Desktop\osm\osm.Tests\DrawingTests.cs(11,10): error CS0246: The type or namespace name 'FactAttribute' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\asaqa\Desktop\osm\osm.csproj]
+C:\Users\asaqa\Desktop\osm\osm.Tests\DrawingTests.cs(11,10): error CS0246: The type or namespace name 'Fact' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\asaqa\Desktop\osm\osm.csproj]
+C:\Users\asaqa\Desktop\osm\osm.Tests\DrawingTests.cs(24,10): error CS0246: The type or namespace name 'FactAttribute' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\asaqa\Desktop\osm\osm.csproj]
+C:\Users\asaqa\Desktop\osm\osm.Tests\DrawingTests.cs(24,10): error CS0246: The type or namespace name 'Fact' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\asaqa\Desktop\osm\osm.csproj]
+C:\Users\asaqa\Desktop\osm\osm.Tests\DrawingTests.cs(40,10): error CS0246: The type or namespace name 'FactAttribute' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\asaqa\Desktop\osm\osm.csproj]
+C:\Users\asaqa\Desktop\osm\osm.Tests\DrawingTests.cs(40,10): error CS0246: The type or namespace name 'Fact' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\asaqa\Desktop\osm\osm.csproj]
+
+Build FAILED.
+    0 Warning(s)
+    17 Error(s)
+
+Time Elapsed 00:00:00.85

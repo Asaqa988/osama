@@ -1,0 +1,12 @@
+﻿C:\Users\asaqa\Desktop\osm\Commands\MoveToCommand.cs(26,19): error CS1061: 'DrawingState' does not contain a definition for 'CurrentX' and no accessible extension method 'CurrentX' accepting a first argument of type 'DrawingState' could be found (are you missing a using directive or an assembly reference?) [C:\Users\asaqa\Desktop\osm\osm.csproj]
+C:\Users\asaqa\Desktop\osm\Commands\MoveToCommand.cs(27,19): error CS1061: 'DrawingState' does not contain a definition for 'CurrentY' and no accessible extension method 'CurrentY' accepting a first argument of type 'DrawingState' could be found (are you missing a using directive or an assembly reference?) [C:\Users\asaqa\Desktop\osm\osm.csproj]
+C:\Users\asaqa\Desktop\osm\Commands\DrawToCommand.cs(29,42): error CS1061: 'DrawingState' does not contain a definition for 'CurrentX' and no accessible extension method 'CurrentX' accepting a first argument of type 'DrawingState' could be found (are you missing a using directive or an assembly reference?) [C:\Users\asaqa\Desktop\osm\osm.csproj]
+C:\Users\asaqa\Desktop\osm\Commands\DrawToCommand.cs(29,58): error CS1061: 'DrawingState' does not contain a definition for 'CurrentY' and no accessible extension method 'CurrentY' accepting a first argument of type 'DrawingState' could be found (are you missing a using directive or an assembly reference?) [C:\Users\asaqa\Desktop\osm\osm.csproj]
+C:\Users\asaqa\Desktop\osm\Commands\DrawToCommand.cs(31,19): error CS1061: 'DrawingState' does not contain a definition for 'CurrentX' and no accessible extension method 'CurrentX' accepting a first argument of type 'DrawingState' could be found (are you missing a using directive or an assembly reference?) [C:\Users\asaqa\Desktop\osm\osm.csproj]
+C:\Users\asaqa\Desktop\osm\Commands\DrawToCommand.cs(32,19): error CS1061: 'DrawingState' does not contain a definition for 'CurrentY' and no accessible extension method 'CurrentY' accepting a first argument of type 'DrawingState' could be found (are you missing a using directive or an assembly reference?) [C:\Users\asaqa\Desktop\osm\osm.csproj]
+
+Build FAILED.
+    0 Warning(s)
+    6 Error(s)
+
+Time Elapsed 00:00:01.05

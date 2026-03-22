@@ -1,0 +1,14 @@
+C:\Users\asaqa\Desktop\osm\obj\Debug\net9.0-windows\osm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asaqa\Desktop\osm\obj\Debug\net9.0-windows\osm.AssemblyInfoInputs.cache
+C:\Users\asaqa\Desktop\osm\obj\Debug\net9.0-windows\osm.AssemblyInfo.cs
+C:\Users\asaqa\Desktop\osm\obj\Debug\net9.0-windows\osm.csproj.CoreCompileInputs.cache
+C:\Users\asaqa\Desktop\osm\bin\Debug\net9.0-windows\osm.exe
+C:\Users\asaqa\Desktop\osm\bin\Debug\net9.0-windows\osm.deps.json
+C:\Users\asaqa\Desktop\osm\bin\Debug\net9.0-windows\osm.runtimeconfig.json
+C:\Users\asaqa\Desktop\osm\bin\Debug\net9.0-windows\osm.dll
+C:\Users\asaqa\Desktop\osm\bin\Debug\net9.0-windows\osm.pdb
+C:\Users\asaqa\Desktop\osm\obj\Debug\net9.0-windows\osm.dll
+C:\Users\asaqa\Desktop\osm\obj\Debug\net9.0-windows\refint\osm.dll
+C:\Users\asaqa\Desktop\osm\obj\Debug\net9.0-windows\osm.pdb
+C:\Users\asaqa\Desktop\osm\obj\Debug\net9.0-windows\osm.genruntimeconfig.cache
+C:\Users\asaqa\Desktop\osm\obj\Debug\net9.0-windows\ref\osm.dll
